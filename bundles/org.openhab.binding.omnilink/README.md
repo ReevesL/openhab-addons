@@ -226,7 +226,7 @@ Bridge omnilink:controller:home [ ipAddress="127.0.0.1", port=4369, key1="XXXXXX
  * Alarms / Areas
  */
 Group:Switch:OR(ON, OFF) Alarms "All Alarms [%s]"
-String    AlarmMode          "Alarm [%s]"              <alarm>               {channel="omnilink:area:home:MainArea:mode" [profile="transform:MAP", function="area-modes.map", sourceFormat="%s"]}
+Number    AlarmMode          "Alarm [%s]"              <alarm>               {channel="omnilink:area:home:MainArea:mode" [profile="transform:MAP", function="area-modes.map", sourceFormat="%s"]}
 Switch    AlarmBurglary      "Burglary Alarm [%s]"               (Alarms)    {channel="omnilink:area:home:MainArea:alarm_burglary"}
 Switch    AlarmFire          "Fire Alarm [%s]"                   (Alarms)    {channel="omnilink:area:home:MainArea:alarm_fire"}
 Switch    alarm_gas          "Gas Alarm [%s]"                    (Alarms)    {channel="omnilink:area:home:MainArea:alarm_gas"}
